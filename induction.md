@@ -22,3 +22,5 @@ $k - 1 < \frac{k^2 - k}{12} + 1$
 $\frac{k^2 - k}{12} + 1 \leq \frac{k^2 + k}{12}$ 
 $1 \leq \frac{2k}{12} \implies 6 \leq k$\
 Since $k > 10$, this holds.  
+
+For all integers $n >= 1$, $\sum_{i=1}^{n} \sqrt{i} > \frac{2n\sqrt{n}}{3}$
