@@ -23,4 +23,23 @@ $\frac{k^2 - k}{12} + 1 \leq \frac{k^2 + k}{12}$
 $1 \leq \frac{2k}{12} \implies 6 \leq k$\
 Since $k > 10$, this holds.  
 
-For all integers $n >= 1$, $\sum_{i=1}^{n} \sqrt{i} > \frac{2n\sqrt{n}}{3}$
+For all integers $n >= 1$, $\sum_{i=1}^{n} \sqrt{i} > \frac{2n\sqrt{n}}{3}$\
+Base Case $k = 1$\
+$\sum_{i=1}^{1} \sqrt{i} = \sqrt{1} = 1$\
+$\frac{2*1\sqrt{1}}{3} = \frac{2}{3}$\
+$1 > \frac{2}{3}$\
+Inductive step:\
+$\sum_{i}^{k+1} \sqrt{i} > \frac{2(k+1)\sqrt{k+1}}{3}$\
+$\sum_{i}^{k+1} \sqrt{i} = \sum_{i=1}^{k} \sqrt{i} + \sqrt{k+1} > \frac{2k\sqrt{k}}{3} + \sqrt{k+1}$\
+$\frac{2k\sqrt{k}}{3} + \sqrt{k+1} >= \frac{2(k+1)\sqrt{k+1}}{3}$\
+$\frac{2k\sqrt{k} + 3\sqrt{k+1}}{3} >= \frac{2(k+1)\sqrt{k+1}}{3}$\
+$2k\sqrt{k} + 3\sqrt{k+1} >= 2(k+1)\sqrt{k+1}$\
+$2k\sqrt{k} >= 2(k+1)\sqrt{k+1} - 3\sqrt{k+1}$\
+$2k\sqrt{k} >= 2(k+1)\sqrt{k+1} - 3\sqrt{k+1}$\
+$2k\sqrt{k} >= (2k -1)\sqrt{k+1}$\
+$4k^2k >= (4k^2 - 4k + 1)*(k+1)$\
+$4k^3>= 4k^3 - 3k+1$\
+$0>=-3k + 1$\
+$3k >= 1$\
+$k >= \frac{1}{3}$\
+$k >= 1$
