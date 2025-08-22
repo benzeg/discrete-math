@@ -26,7 +26,7 @@ Since $k > 10$, this holds.
 For all integers $n >= 1$, $\sum_{i=1}^{n} \sqrt{i} > \frac{2n\sqrt{n}}{3}$\
 Base Case $k = 1$\
 $\sum_{i=1}^{1} \sqrt{i} = \sqrt{1} = 1$\
-$\frac{2*1\sqrt{1}}{3} = \frac{2}{3}$\
+$\frac{2\cdot1\sqrt{1}}{3} = \frac{2}{3}$\
 $1 > \frac{2}{3}$\
 Inductive step:\
 $\sum_{i}^{k+1} \sqrt{i} > \frac{2(k+1)\sqrt{k+1}}{3}$\
