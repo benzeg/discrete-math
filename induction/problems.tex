@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\begin{document}
+
+
+Problem 1.
+
+\begin{proof}
+We prove by induction that for all integers $n > 10$, 
+\[
+n - 2 < \frac{n^2 - n}{12}.
+\]
+
+\textbf{Base Case: } $n = 11$
+\[
+11 - 2 < \frac{11^2 - 11}{12} \implies 9 < \frac{110}{12} \implies 9 < 9.166\quad \text{(True)}.
+\]
+
+\textbf{Inductive Step: } Assume for some $k > 10$ that
+\[
+k - 2 < \frac{k^2 - k}{12}.
+\]
+We show for $k + 1$:
+\[
+(k + 1) - 2 < \frac{(k + 1)^2 - (k + 1)}{12} \implies k - 1 < \frac{k^2 + k}{12}.
+\]
+
+\textbf{Proof: } From the inductive hypothesis,
+\[
+k - 2 < \frac{k^2 - k}{12}.
+\]
+Add 1 to both sides:
+\[
+k - 1 < \frac{k^2 - k}{12} + 1.
+\]
+Now observe that
+\[
+\frac{k^2 - k}{12} + 1 \leq \frac{k^2 + k}{12} \quad \text{if and only if} \quad 1 \leq \frac{2k}{12} \implies 6 \leq k.
+\]
+Since $k > 10$, this inequality holds. Therefore,
+\[
+k - 1 < \frac{k^2 - k}{12} + 1 \leq \frac{k^2 + k}{12},
+\]
+which completes the inductive step.
+
+By mathematical induction, the statement holds for all integers $n > 10$.
+
+\end{proof}
+
+problem 2.
+
+\begin{proof}
+We prove by induction that for all integers $n \geq 1$,
+\[
+\sum_{i=1}^{n} \sqrt{i} > \frac{2n\sqrt{n}}{3}.
+\]
+
+\textbf{Base Case: } $n = 1$
+\[
+\sum_{i=1}^{1} \sqrt{i} = \sqrt{1} = 1, \quad \frac{2 \cdot 1 \cdot \sqrt{1}}{3} = \frac{2}{3}, \quad 1 > \frac{2}{3}.
+\]
+The base case holds.
+
+\textbf{Inductive Step: } Assume for some $k \geq 1$ that
+\[
+\sum_{i=1}^{k} \sqrt{i} > \frac{2k\sqrt{k}}{3}.
+\]
+We show for $k + 1$:
+\[
+\sum_{i=1}^{k+1} \sqrt{i} > \frac{2(k+1)\sqrt{k+1}}{3}.
+\]
+
+Starting from the left side:
+\[
+\sum_{i=1}^{k+1} \sqrt{i} = \sum_{i=1}^{k} \sqrt{i} + \sqrt{k+1} > \frac{2k\sqrt{k}}{3} + \sqrt{k+1}.
+\]
+
+It suffices to show that:
+\[
+\frac{2k\sqrt{k}}{3} + \sqrt{k+1} \geq \frac{2(k+1)\sqrt{k+1}}{3}.
+\]
+
+Multiply both sides by 3:
+\[
+2k\sqrt{k} + 3\sqrt{k+1} \geq 2(k+1)\sqrt{k+1}.
+\]
+
+Rearrange terms:
+\[
+2k\sqrt{k} \geq 2(k+1)\sqrt{k+1} - 3\sqrt{k+1} = (2k - 1)\sqrt{k+1}.
+\]
+
+Square both sides (valid since all terms are positive for $k \geq 1$):
+\[
+(2k\sqrt{k})^2 \geq ((2k - 1)\sqrt{k+1})^2,
+\]
+\[
+4k^2 \cdot k \geq (2k - 1)^2 \cdot (k + 1),
+\]
+\[
+4k^3 \geq (4k^2 - 4k + 1)(k + 1).
+\]
+
+Expand the right side:
+\[
+4k^3 \geq 4k^3 + 4k^2 - 4k^2 - 4k + k + 1 = 4k^3 - 3k + 1.
+\]
+
+Subtract $4k^3$ from both sides:
+\[
+0 \geq -3k + 1 \quad \Longleftrightarrow \quad 3k \geq 1 \quad \Longleftrightarrow \quad k \geq \frac{1}{3}.
+\]
+
+Since $k \geq 1$, this inequality holds. Therefore,
+\[
+\sum_{i=1}^{k+1} \sqrt{i} > \frac{2(k+1)\sqrt{k+1}}{3},
+\]
+which completes the inductive step.
+
+By mathematical induction, the statement holds for all integers $n \geq 1$.
+\end{proof}
+
+\end{document}
