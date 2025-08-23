@@ -123,4 +123,39 @@ which completes the inductive step.
 By mathematical induction, the statement holds for all integers $n \geq 1$.
 \end{proof}
 
+\begin{proof}
+We prove by induction that for all integers $n \geq 0$,
+\[
+\sum_{i=0}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}.
+\]
+
+\noindent\textbf{Base Case ($n = 0$):}
+\[
+\sum_{i=0}^{0} i^2 = 0 \quad \text{and} \quad \frac{0(0+1)(2\cdot0+1)}{6} = 0.
+\]
+Thus, the base case holds.
+
+\noindent\textbf{Inductive Step:} Assume that for some $k \geq 0$,
+\[
+\sum_{i=0}^{k} i^2 = \frac{k(k+1)(2k+1)}{6}.
+\]
+We will show that the statement holds for $k+1$, that is,
+\[
+\sum_{i=0}^{k+1} i^2 = \frac{(k+1)(k+2)(2k+3)}{6}.
+\]
+
+Starting from the left-hand side:
+\begin{align*}
+\sum_{i=0}^{k+1} i^2 &= \sum_{i=0}^{k} i^2 + (k+1)^2 \\
+&= \frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\
+&= (k+1)\left[\frac{k(2k+1)}{6} + (k+1)\right] \\
+&= (k+1)\left[\frac{k(2k+1) + 6(k+1)}{6}\right] \\
+&= (k+1)\left[\frac{2k^2 + k + 6k + 6}{6}\right] \\
+&= (k+1)\left[\frac{2k^2 + 7k + 6}{6}\right] \\
+&= \frac{(k+1)(k+2)(2k+3)}{6}.
+\end{align*}
+This completes the inductive step.
+
+\noindent By mathematical induction, the statement holds for all integers $n \geq 0$.
+\end{proof}
 \end{document}
