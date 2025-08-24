@@ -196,4 +196,41 @@ We consider two cases:
 
 In both cases, $k+1$ is a product of primes. By the principle of strong mathematical induction, every integer $n > 1$ is a product of primes.
 \end{proof}
+
+Problem 6.
+\begin{proof}
+We prove by induction that for all positive integers $n$,
+\[
+F_1 + F_3 + \cdots + F_{2n-1} = F_{2n},
+\]
+where $F_i$ denotes the $i^{\text{th}}$ Fibonacci number, defined by $F_1 = 1$, $F_2 = 1$, and $F_n = F_{n-1} + F_{n-2}$ for $n \geq 3$.
+
+\textbf{Base Case:} ($n = 1$)
+\[
+F_1 = 1 \quad \text{and} \quad F_2 = 1, \quad \text{so} \quad F_1 = F_2.
+\]
+Thus, the base case holds.
+
+\textbf{Inductive Hypothesis:} Assume for some $k \geq 1$ that
+\[
+F_1 + F_3 + \cdots + F_{2k-1} = F_{2k}.
+\]
+
+\textbf{Inductive Step:} We now show that the statement holds for $n = k+1$, i.e.,
+\[
+F_1 + F_3 + \cdots + F_{2k-1} + F_{2k+1} = F_{2k+2}.
+\]
+
+Starting from the left-hand side:
+\begin{align*}
+F_1 + F_3 + \cdots + F_{2k-1} + F_{2k+1} &= \left(F_1 + F_3 + \cdots + F_{2k-1}\right) + F_{2k+1} \\
+&= F_{2k} + F_{2k+1} \quad \text{(by the inductive hypothesis)} \\
+&= F_{2k+2} \quad \text{(by the Fibonacci recurrence relation)}.
+\end{align*}
+This completes the inductive step.
+
+By mathematical induction, the statement holds for all positive integers $n$.
+\end{proof}
+
+
 \end{document}
