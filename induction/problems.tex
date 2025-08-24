@@ -50,7 +50,7 @@ By mathematical induction, the statement holds for all integers $n > 10$.
 
 \end{proof}
 
-problem 2.
+Problem 2.
 
 \begin{proof}
 We prove by induction that for all integers $n \geq 1$,
@@ -123,6 +123,7 @@ which completes the inductive step.
 By mathematical induction, the statement holds for all integers $n \geq 1$.
 \end{proof}
 
+Problem 3.
 \begin{proof}
 We prove by induction that for all integers $n \geq 0$,
 \[
@@ -157,5 +158,42 @@ Starting from the left-hand side:
 This completes the inductive step.
 
 \noindent By mathematical induction, the statement holds for all integers $n \geq 0$.
+\end{proof}
+
+Problem 4.
+\begin{proof}
+We prove by \textbf{strong induction} that every integer $n > 1$ is either prime or can be written as a product of prime numbers.
+
+\textbf{Base Case:} ($n = 2$)
+The number $2$ is prime by definition, as its only positive divisors are $1$ and $2$. A single prime is trivially considered a product of primes. Thus, the statement holds for $n=2$.
+
+\textbf{Inductive Step:}
+Assume the inductive hypothesis: that for some integer $k \geq 2$, every integer $j$ with $2 \leq j \leq k$ is a product of primes (i.e., is prime itself or can be factored into primes). We must show that the integer $k+1$ is also a product of primes.
+
+We consider two cases:
+
+\begin{itemize}
+    \item \textbf{Case 1:} If $k+1$ is prime, then it is trivially a product of primes (itself), and we are done.
+    \item \textbf{Case 2:} If $k+1$ is composite, then by the definition of a composite number, it has positive divisors other than $1$ and itself. Therefore, it can be written as:
+    \[
+    k+1 = a \cdot b
+    \]
+    where $a$ and $b$ are integers satisfying $1 < a, b < k+1$.
+    
+    Since $2 \leq a \leq k$ and $2 \leq b \leq k$, the strong induction hypothesis applies to both $a$ and $b$. Hence, both are products of primes:
+    \begin{align*}
+        a &= p_1p_2 \cdots p_m, \\
+        b &= q_1q_2 \cdots q_n,
+    \end{align*}
+    where each $p_i$ and $q_j$ is a prime number.
+    
+    Substituting these products, we find:
+    \[
+    k+1 = a \cdot b = (p_1p_2 \cdots p_m)(q_1q_2 \cdots q_n).
+    \]
+    This is clearly a product of prime numbers.
+\end{itemize}
+
+In both cases, $k+1$ is a product of primes. By the principle of strong mathematical induction, every integer $n > 1$ is a product of primes.
 \end{proof}
 \end{document}
