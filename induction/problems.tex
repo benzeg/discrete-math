@@ -232,5 +232,55 @@ This completes the inductive step.
 By mathematical induction, the statement holds for all positive integers $n$.
 \end{proof}
 
+Problem 7.
+\begin{proof}
+We will prove by induction that $2^{n} > n^{2}$ for all natural numbers $n \geq 5$.
 
+\textbf{Base Case: } $n = 5$
+\[
+2^{5} = 32 \quad \text{and} \quad 5^{2} = 25.
+\]
+Since $32 > 25$, the base case holds.
+
+\textbf{Inductive Step:} Assume the induction hypothesis holds for some integer $k \geq 5$, that is, assume
+\[
+2^{k} > k^{2}. \tag{IH}
+\]
+We must now prove that the inequality holds for $k+1$, i.e.,
+\[
+2^{k+1} > (k+1)^{2}.
+\]
+
+Starting with the left-hand side of the desired inequality:
+\[
+2^{k+1} = 2 \cdot 2^{k}.
+\]
+By the induction hypothesis (IH), $2^{k} > k^{2}$, so we can substitute:
+\[
+2^{k+1} > 2 \cdot k^{2}. \tag{1}
+\]
+
+Our goal is to show that the right-hand side of (1) is greater than $(k+1)^{2}$. Let us therefore examine the inequality:
+\[
+2k^{2} > (k+1)^{2}.
+\]
+Expanding the right-hand side gives:
+\[
+2k^{2} > k^{2} + 2k + 1.
+\]
+Subtracting $k^2$ from both sides yields the equivalent inequality:
+\[
+k^{2} > 2k + 1. \tag{2}
+\]
+
+We now show that inequality (2) is true for $k \geq 5$. Consider the function $f(k) = k^{2} - 2k - 1$. Its derivative $f'(k) = 2k - 2$ is positive for $k > 1$, so $f(k)$ is increasing for $k \geq 5$. Since $f(5) = 25 - 10 - 1 = 14 > 0$, it follows that $k^{2} > 2k + 1$ for all $k \geq 5$. Therefore, inequality (2) holds.
+
+We can now chain the inequalities together. From (1) we have $2^{k+1} > 2k^{2}$, and from (2) we have $2k^{2} > k^{2} + 2k + 1 = (k+1)^{2}$. Hence,
+\[
+2^{k+1} > 2k^{2} > (k+1)^{2},
+\]
+which completes the inductive step.
+
+By the principle of mathematical induction, $2^{n} > n^{2}$ for all natural numbers $n \geq 5$.
+\end{proof}
 \end{document}
