@@ -317,4 +317,56 @@ which is divisible by $7$.
 
 By the principle of mathematical induction, $9^n - 2^n$ is divisible by $7$ for all integers $n \geq 1$.
 \end{proof}    
+
+Problem 10.
+\begin{proof}
+We will prove by induction that \(\sum_{i=1}^{n} (4i - 3) = \frac{n(4n - 2)}{2}\) for all natural numbers \(n\).
+
+\textbf{Base Case (\(n = 1\)):}
+\[
+\sum_{i=1}^{1} (4i - 3) = 4(1) - 3 = 1.
+\]
+\[
+\frac{1 \cdot (4 \cdot 1 - 2)}{2} = \frac{1 \cdot 2}{2} = 1.
+\]
+Since both expressions equal \(1\), the base case holds.
+
+\textbf{Inductive Step:} Assume that for some integer \(k \geq 1\), the statement holds. That is, assume the inductive hypothesis:
+\[
+\sum_{i=1}^{k} (4i - 3) = \frac{k(4k - 2)}{2}.
+\]
+We will show that the statement is true for \(k+1\), i.e.,
+\[
+\sum_{i=1}^{k+1} (4i - 3) = \frac{(k+1)(4(k+1) - 2)}{2} = \frac{(k+1)(4k + 2)}{2}.
+\]
+
+Starting from the left-hand side of the statement for \(k+1\):
+\begin{align*}
+\sum_{i=1}^{k+1} (4i - 3) &= \left( \sum_{i=1}^{k} (4i - 3) \right) + (4(k+1) - 3) \\
+&= \frac{k(4k - 2)}{2} + (4k + 4 - 3) && \text{(by the inductive hypothesis)} \\
+&= \frac{k(4k - 2)}{2} + (4k + 1) \\
+&= \frac{k(4k - 2) + 2(4k + 1)}{2} && \text{(obtaining a common denominator)} \\
+&= \frac{4k^2 - 2k + 8k + 2}{2} \\
+&= \frac{4k^2 + 6k + 2}{2}.
+\end{align*}
+Now, we factor the numerator to show it matches our target expression:
+\begin{align*}
+\frac{4k^2 + 6k + 2}{2} &= \frac{2(2k^2 + 3k + 1)}{2} \\
+&= 2k^2 + 3k + 1.
+\end{align*}
+And indeed, the target expression also simplifies to the same result:
+\begin{align*}
+\frac{(k+1)(4k + 2)}{2} &= \frac{(k+1) \cdot 2(2k + 1)}{2} \\
+&= (k+1)(2k + 1) \\
+&= 2k^2 + k + 2k + 1 \\
+&= 2k^2 + 3k + 1.
+\end{align*}
+Therefore, we have shown that
+\[
+\sum_{i=1}^{k+1} (4i - 3) = \frac{(k+1)(4k + 2)}{2},
+\]
+which completes the inductive step.
+
+By the principle of mathematical induction, the formula \(\sum_{i=1}^{n} (4i - 3) = \frac{n(4n - 2)}{2}\) holds for all natural numbers \(n\).
+\end{proof}
 \end{document}
