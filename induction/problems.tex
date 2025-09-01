@@ -369,4 +369,32 @@ which completes the inductive step.
 
 By the principle of mathematical induction, the formula \(\sum_{i=1}^{n} (4i - 3) = \frac{n(4n - 2)}{2}\) holds for all natural numbers \(n\).
 \end{proof}
+Problem 11.
+\begin{proof}
+We prove by induction that $2^{n} \geq 1 + n$ for all $n \geq 1$.
+
+\textbf{Base Case ($n = 1$):}
+\[
+2^{1} = 2 \geq 1 + 1 = 2.
+\]
+Thus, the base case holds.
+
+\textbf{Inductive Step:} Assume that for some integer $k \geq 1$, the statement holds. That is, assume
+\[
+2^{k} \geq 1 + k.
+\]
+This is our inductive hypothesis. We will show that the statement is true for $k+1$, i.e., that $2^{k+1} \geq 1 + (k+1)$.
+
+\begin{align*}
+2^{k+1} &= 2^{k} \cdot 2 \\
+&\geq (1 + k) \cdot 2 \quad \text{(by the inductive hypothesis)} \\
+&= 2 + 2k \\
+&= (k + 2) + k \\
+&\geq k + 2 \quad \text{(since $k \geq 1 > 0$)} \\
+&= 1 + (k + 1).
+\end{align*}
+Thus, the statement holds for $k+1$.
+
+By mathematical induction, $2^{n} \geq 1 + n$ for all $n \geq 1$.
+\end{proof}
 \end{document}
